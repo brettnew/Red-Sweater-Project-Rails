@@ -38,5 +38,6 @@ source 'https://rubygems.org'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'coffee-script'
+  gem 'gibbon', git: 'git://github.com/amro/gibbon.git'
 
 ruby '2.2.2'

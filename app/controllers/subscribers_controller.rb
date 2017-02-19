@@ -8,6 +8,8 @@ class SubscribersController < ApplicationController
   end
 
   def create
+    gibbon = Gibbon::Request.new(api_key: ENV["MAILCHIMP_API_KEY"])
+    gibbon.lists(ENV["MAILCHIMP_LIST_ID"]).members.create(body: {email_address: subscriber_params[:email], status: "subscribed"})
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
       flash[:notice]="Thanks for signing up!"
