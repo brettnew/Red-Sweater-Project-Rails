@@ -850,6 +850,24 @@ li .btn-donate {
   -moz-background-size: cover;
   -o-background-size: cover; }
 
+.faq {
+  background: url(../images/hero/hero_faq.jpg) center center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
+
+.goodcause {
+  background: url(../images/hero/hero_goodcause.jpg) center center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
+
 .img-wrapper {
   width: 100%; }
 
