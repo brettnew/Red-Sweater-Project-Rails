@@ -1359,33 +1359,9 @@ select {
 .background-grey {
   background-color: #f7f7f7; }
 
-.donate-right {
-  width: 30%;
-  color: white;
-  margin-bottom: 2em;
-  margin-right: 0;
-  padding-right: 0; }
-  .donate-right h2 {
-    font-family: 'Amatic SC', cursive; }
-
 .blue-donate {
   background-color: #2877A0;
-  padding: 40px 20px 40px 20px;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-  .blue-donate p {
-    color: white; }
-  .blue-donate h2 {
-    text-align: left; }
-
-.blue-donate h5, .lt-blue-donate h5 {
-  padding-top: 0;
-  font-size: 1.5em;
-  padding-bottom: 10px;
-  text-align: center;
-  letter-spacing: 1px; }
+  padding: 40px 20px 40px 20px; }
 
 .lt-blue-donate {
   background-color: #2877A0;
@@ -1395,8 +1371,10 @@ select {
   .lt-blue-donate hr {
     border: .5px solid white; }
 
-form.donate-left {
-  width: 100%; }
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 .sponsor-students:hover {
   border: 1px solid #febe10; }

@@ -14,12 +14,12 @@
         <p class="lead">
           Sponsorship of a child equips them with everything they need to be successful in the classroom. It’s also an opportunity to build a lasting, meaningful friendship. USD $125 per month or USD $1,500 a year
         </p>
-        <ul class=""><p><strong>Sponsors receive:</strong></p>
+        <ul class="mt-4"><h5>SPONSORS RECEIVE:</h5>
           <li>• Handwritten letters and drawings from your student</li>
           <li>• A chance to exchange letters and stories, as well as to learn from a new friend</li>
         </ul>
 
-        <ul class=""><p><strong>Sponsored students receive:</strong></p>
+        <ul class=""><h5>SPONSORED STUDENTS RECEIVE:</h5>
           <li>• A quality education with certified, experienced teachers</li>
           <li>• School supplies</li>
           <li>• A school uniform, including their red sweater!</li>
@@ -44,7 +44,7 @@
         <div class="col-sm-3 sponsor-students">
           <a href="../images/bios/<%= student.biolink %>" target="_blank" class="imagelink">
           <%= image_tag("#{student.image}.png", :class => "img-responsive img-rounded") %></a>
-            <h3><%= student.name %></h3>
+            <h3 class="pl-1"><%= student.name %></h3>
             <p><%= student.age %> year-old <%= student.gender %></p><br/>
             <p><strong>I want to become: </strong><br/><%= student.dream %></p>
             <p><a href="../images/bios/<%= student.biolink %>" target="_blank">Learn more about me</a></p>

@@ -1,37 +1,7 @@
-.donate-right {
-  h2 {
-    font-family: 'Amatic SC', cursive;
-  }
-  width: 30%;
-  color: white;
-  margin-bottom: 2em;
-  margin-right: 0;
-  padding-right: 0;
-}
 
 .blue-donate {
   background-color: $text-blue;
   padding: 40px 20px 40px 20px;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  p {
-    color: white;
-  }
-  h2 {
-    text-align: left;
-  }
-}
-
-.blue-donate, .lt-blue-donate {
-  h5 {
-    padding-top: 0;
-    font-size: 1.5em;
-    padding-bottom: 10px;
-    text-align: center;
-    letter-spacing: 1px;
-  }
 }
 
 .lt-blue-donate {
@@ -40,6 +10,12 @@
   hr {
     border: .5px solid white;
   }
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 // .donate-left {
@@ -59,6 +35,6 @@
 //
 // }
 
-form.donate-left {
-  width: 100%;
-}
+// form.donate-left {
+//   width: 100%;
+// }
