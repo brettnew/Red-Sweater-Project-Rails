@@ -1,5 +1,5 @@
 <!-- Banner -->
-<div class="page-banner creative">
+<div class="page-banner goodcause">
   <div class="shadow-box">
     <div class="banner-content page-canvas page-title">
       <h2>Invest In A good Cause On Campus</span></h2>
@@ -10,7 +10,7 @@
 
 <!-- <div class="blue"> -->
 <div class="flex page-canvas">
-  <div class="flex-item-1col">
+  <div class="flex-item-1col mb-0 pb-0">
     <p class="lead">
       There are several projects underway at the Mungere School that need the support of donors like you. Explore our projects below and support your favorite cause.
     </p>
@@ -18,19 +18,21 @@
 </div>
 
 <div class="flex page-canvas items-wrap">
-  <div class="row">
-    <% if @goodcauses.any? %>
-      <% @goodcauses.each do |cause| %>
-        <div class="col-sm-5 sponsor-students sponsor-project">
-          <%= image_tag("#{cause.image}.png") %>
-          <h3><%= cause.name %></h3>
-          <p><%= cause.details %></p><br/>
-          <p class="copy-bottom"><strong>Suggested gift: </strong><br/>
-            USD $<%= cause.suggested %></p>
-          <%= link_to "Contribute", students_path, :class => "btn btn-yellow" %>
-        </div>
+  <div class="flex-item-1col">
+    <div class="row">
+      <% if @goodcauses.any? %>
+        <% @goodcauses.each do |cause| %>
+          <div class="col-sm-3 sponsor-students sponsor-project">
+            <%= image_tag("#{cause.image}.png") %>
+            <h3 class="px-2 mb-2"><%= cause.name %></h3>
+            <p><%= cause.details %></p><br/>
+            <p class="copy-bottom"><strong>Suggested gift: </strong><br/>
+              USD $<%= cause.suggested %></p>
+            <%= link_to "Contribute", students_path, :class => "btn btn-yellow" %>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
@@ -44,7 +46,7 @@
           It’s a long way from Portland to Tanzania. Read how our founder, Ashley Holmer, first saw the potential in a red sweater and explore our timeline to see how far we’ve come since 2005.
         </p>
         <div class="btns-wrapper">
-          <a href="/pages/ourstory" class="btn btn-solid">SEE HOW IT ALL BEGAN</a>
+          <a href="/pages/ourstory" class="btn btn-solid mt-4">SEE HOW IT ALL BEGAN</a>
         </div>
       </div>
     </div>

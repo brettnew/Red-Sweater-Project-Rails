@@ -9,145 +9,137 @@
 </div>
 
 <div class="flex page-canvas">
-  <div class="donate-left">
-    <h2><span style="color:#fdbe16;">Donate</span></h2>
-    <p>
-      Your tax-deductible gift supports the incredible students at The Mungere School, helping them complete their high school education as well as providing hands-on classes in organic agriculture and business.
-    </p>
-      <br>
-      <br>
-    <p class="arrow-down" id="check-arrow-down"><strong>TO DONATE BY CHECK</strong><%= image_tag("arrow-down.svg")%></p>
-    <p class="arrow-up" id="check-arrow-up"><strong>TO DONATE BY CHECK</strong><%= image_tag("arrow-up.svg")%></p>
-
-    <br>
-    <p id="check-donation-details">
-      Fill out our donation form, and sending it along with your gift to:<br>
-      <em>Red Sweater Project <br/>
-      1000 SW Forest Meadows Way <br/>
-      Lake Oswego, OR 97034 <br/></em>
-      <br/>
-    </p>
-
-    <p class="arrow-down" id="change-arrow-down"><strong>TO CHANGE AN EXISTING DONATION</strong><%= image_tag("arrow-down.svg")%></p>
-    <p class="arrow-up" id="change-arrow-up"><strong>TO CHANGE AN EXISTING DONATION</strong><%= image_tag("arrow-up.svg")%></p>
-      <p id="change-donation">
-        Send a change request form to <a href="mailto:donate@redsweaterprojec.org">donate@redsweaterproject.org</a>. Or mail the printed form to the address above. <br/><br/>
-        <a href="">Download change request form PDF (1MB )</a>
-      </p>
-    <div class="donation-details">
-      <hr>
-      <h2>DONATION DETAILS</h2><br/>
-
-      <%= form_tag charges_path, class:"donate-left" do %>
-        <div id="error_explanation">
-          <% if flash[:error].present? %>
-            <p><%= flash[:error] %></p>
-          <% end %>
-        </div>
-
-        <article>
-          <label class="amount">
-            <span>Amount: $150/month</span>
-          </label>
-        </article>
-
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="Monthly sponsorship"
-          data-amount="15000"></script>
-    <% end %>
-
-    </div>
-    <div class="">
+  <div class="flex-item-1col" style="position:relative">
+    <div class="col-sm-7">
+      <h2><span style="color:#fdbe16;">Donate</span></h2>
       <p>
-        All gifts received in the United States are 100% tax-deductible. Red Sweater Project is a registered 501(c)3 non-profit organization in the United States, EIN #27-5222528, and a registered Non-governmental Organization in the United Republic of Tanzania, NGO #5912.
+        Your tax-deductible gift supports the incredible students at The Mungere School, helping them complete their high school education as well as providing hands-on classes in organic agriculture and business.
       </p>
-    </div>
-  </div>
+      <p class="arrow-down" id="check-arrow-down"><strong>TO DONATE BY CHECK</strong><%= image_tag("arrow-down.svg")%></p>
+      <p class="arrow-up" id="check-arrow-up"><strong>TO DONATE BY CHECK</strong><%= image_tag("arrow-up.svg")%></p>
+      <br>
+      <p id="check-donation-details">
+        Fill out our donation form, and sending it along with your gift to:<br>
+        <em>Red Sweater Project <br/>
+          1000 SW Forest Meadows Way <br/>
+          Lake Oswego, OR 97034 <br/></em>
+        </p>
 
-    <div class="donate-right">
+      <p class="arrow-down" id="change-arrow-down"><strong>TO CHANGE AN EXISTING DONATION</strong><%= image_tag("arrow-down.svg")%></p>
+      <p class="arrow-up" id="change-arrow-up"><strong>TO CHANGE AN EXISTING DONATION</strong><%= image_tag("arrow-up.svg")%></p>
+        <p id="change-donation">
+          Send a change request form to <a href="mailto:donate@redsweaterprojec.org">donate@redsweaterproject.org</a>. Or mail the printed form to the address above. <br/><br/>
+          <a href="">Download change request form PDF (1MB )</a>
+        </p>
+      <div class="donation-details">
+        <hr>
+        <h2>DONATION DETAILS</h2><br/>
+
+        <%= form_tag charges_path, class:"donate-left" do %>
+          <div id="error_explanation">
+            <% if flash[:error].present? %>
+              <p><%= flash[:error] %></p>
+            <% end %>
+          </div>
+
+          <article>
+            <label class="amount">
+              <span>Amount: $150/month</span>
+            </label>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Monthly sponsorship"
+            data-amount="15000"></script>
+      <% end %>
+      </div>
+      <div class="">
+        <p>
+          All gifts received in the United States are 100% tax-deductible. Red Sweater Project is a registered 501(c)3 non-profit organization in the United States, EIN #27-5222528, and a registered Non-governmental Organization in the United Republic of Tanzania, NGO #5912.
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-5 white-text sidebar">
       <div class="blue-donate">
-        <h5>EVERY GIFT MAKES A DIFFERENCE</h5>
+        <h3 class="white-text text-center mt-0">EVERY GIFT MAKES A DIFFERENCE</h3>
         <p class="white-text">
           Using solar power and creating our own compost at the school are just a few of the ways we work to keep our overhead low so every dollar can have the greatest impact in the lives of our students.
         </p>
       </div>
-    <div class="lt-blue-donate">
-      <h5>HOW MUCH OF A DIFFERENCE CAN YOU MAKE?</h5>
-      <br>
-      <h5>$25</h5>
-      <ul>
-        <li>• Feed 3 students for a month.</li>
-        <li>• Cure 5 cases of malaria, keeping kids out of hospitals and in the classroom.</li>
-        <li>• Stock our library with 6 new subject textbooks.</li>
-      </ul>
-      <hr>
-      <h5>$50</h5>
-      <ul>
-        <li>• Keep our first aid kit stocked for 3 months.</li>
-        <li>• Buy 20 fruit trees for the school garden. </li>
-        <li>• Supply 5 students with notebooks for the school year.</li>
-      </ul>
-      <hr>
-      <h5>$100</h5>
-      <ul>
-        <li>• Outfit 5 students in their Red Sweater uniform.</li>
-        <li>• Provide a desk and a chair for a student.</li>
-        <li>• Send our students to compete in regional tournaments. Activities include track, soccer, and debate.</li>
-      </ul>
-      <hr>
-      <h5>$500</h5>
-      <ul>
-        <li>• Provide off-campus vocational training for 25 students.</li>
-        <li>• Send a class on an adventure! Allow students to venture out of the village for educational field trips and hands-on learning. </li>
-        <li>• Throw our graduation celebration for Mungere’s next Form IV class.</li>
-      </ul>
+      <div class="lt-blue-donate">
+        <p class="white-text text-center my-0">HOW MUCH OF A DIFFERENCE CAN YOU MAKE?</p>
+        <h3 class="white-text text-center">$25</h3>
+        <ul class="white-text">
+          <li class="white-text">• Feed 3 students for a month.</li>
+          <li class="white-text">• Cure 5 cases of malaria, keeping kids out of hospitals and in the classroom.</li>
+          <li class="white-text">• Stock our library with 6 new subject textbooks.</li>
+        </ul>
+        <hr>
+        <h3 class="white-text text-center">$50</h3>
+        <ul>
+          <li class="white-text">• Keep our first aid kit stocked for 3 months.</li>
+          <li class="white-text">• Buy 20 fruit trees for the school garden. </li>
+          <li class="white-text">• Supply 5 students with notebooks for the school year.</li>
+        </ul>
+        <hr>
+        <h3 class="white-text text-center">$100</h3>
+        <ul>
+          <li class="white-text">• Outfit 5 students in their Red Sweater uniform.</li>
+          <li class="white-text">• Provide a desk and a chair for a student.</li>
+          <li class="white-text">• Send our students to compete in regional tournaments. Activities include track, soccer, and debate.</li>
+        </ul>
+        <hr>
+        <h3 class="white-text text-center">$500</h3>
+        <ul>
+          <li class="white-text">• Provide off-campus vocational training for 25 students.</li>
+          <li class="white-text">• Send a class on an adventure! Allow students to venture out of the village for educational field trips and hands-on learning. </li>
+          <li class="white-text">• Throw our graduation celebration for Mungere’s next Form IV class.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
+<script src="https://checkout.stripe.com/checkout.js">
+  var handler = StripeCheckout.configure({
+    key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+    locale: 'auto',
+    name: 'Red Sweater Project',
+    description: 'One-time donation',
+    token: function(token) {
+      $('input#stripeToken').val(token.id);
+      $('form').submit();
+    }
+  });
 
-<script src="https://checkout.stripe.com/checkout.js"></script>
+  $('#donateButton').on('click', function(e) {
+    e.preventDefault();
 
-<script>
-var handler = StripeCheckout.configure({
-  key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-  locale: 'auto',
-  name: 'Red Sweater Project',
-  description: 'One-time donation',
-  token: function(token) {
-    $('input#stripeToken').val(token.id);
-    $('form').submit();
-  }
-});
+    $('#error_explanation').html('');
 
-$('#donateButton').on('click', function(e) {
-  e.preventDefault();
+    var amount = $('input#amount').val();
+    amount = amount.replace(/\$/g, '').replace(/\,/g, '')
 
-  $('#error_explanation').html('');
+    amount = parseFloat(amount);
 
-  var amount = $('input#amount').val();
-  amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+    if (isNaN(amount)) {
+      $('#error_explanation').html('<p>Please enter a valid amount in USD ($).</p>');
+    }
+    else if (amount < 5.00) {
+      $('#error_explanation').html('<p>Donation amount must be at least $5.</p>');
+    }
+    else {
+      amount = amount * 100; // Needs to be an integer!
+      handler.open({
+        amount: Math.round(amount)
+      })
+    }
+  });
 
-  amount = parseFloat(amount);
-
-  if (isNaN(amount)) {
-    $('#error_explanation').html('<p>Please enter a valid amount in USD ($).</p>');
-  }
-  else if (amount < 5.00) {
-    $('#error_explanation').html('<p>Donation amount must be at least $5.</p>');
-  }
-  else {
-    amount = amount * 100; // Needs to be an integer!
-    handler.open({
-      amount: Math.round(amount)
-    })
-  }
-});
-
-$(window).on('popstate', function() {
-  handler.close();
-});
+  $(window).on('popstate', function() {
+    handler.close();
+  });
 
   $(document).ready(function() {
 

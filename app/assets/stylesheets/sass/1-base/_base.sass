@@ -1,4 +1,6 @@
 // RESET BOX-SIZING FOR THE DOC
+$text-blue: #2877A0
+
 *,
 *::before,
 *::after
@@ -58,6 +60,11 @@ header
   h2
     color: white
 
+.blue-text
+  color: $text-blue !important
+  &:hover
+    color: $yellow !important
+
 .no-top-pad
   padding: 0 30px 0 0
 
@@ -88,3 +95,13 @@ header
   border-color: #d6e9c6
   color: #468847
   text-align: left
+
+
+#privacy
+  margin-top: 100px
+
+
+.shadow
+  -moz-box-shadow:    2px 2px 3px 2px #e8e8e8
+  -webkit-box-shadow: 2px 2px 3px 2px #e8e8e8
+  box-shadow:         2px 2px 3px 2px #e8e8e8

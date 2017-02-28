@@ -75,28 +75,29 @@ h4
   letter-spacing: 1px
 
 h5
-  font-size: 16px
-  line-height: 24px
-  font-weight: 600
+  font-size: 1.1em
+  line-height: 1.5em
+  font-weight: 500
   padding-top: 15px
-  line-height: 20px
+  color: $text-blue
+  letter-spacing: .5px
 
 h6
   font-size: 13px
   line-height: 13px
 
 p, li
-  font-size: 1.25em
+  font-size: 1.1em
   line-height: 1.5em
   font-family: 'proxima-nova', sans-serif
-  font-weight: 400
+  font-weight: 300
   color: $body-type-grey
 
 .white-text
   color: white
 
 .yellow-text
-  color: $yellow
+  color: $yellow !important
 
 .ltyellow-text
   color: $ltyellow
@@ -115,8 +116,23 @@ ul
   letter-spacing: .5px
   color: white
   padding: 0 0 60px 0
+  a
+    &:hover
+      text-decoration: none
+  #natgeo
+    color: white
+    border-bottom: 1px solid white
   li, p, h3
     font-weight: 300
     color: white
     a:hover
-      text-decoration: underline
+      text-decoration: none
+
+.ltgrey
+  background-color: #f7f7f7
+  height: auto
+  letter-spacing: .5px
+  // color: white
+  padding: 0 0 60px 0
+  a
+    text-decoration: none

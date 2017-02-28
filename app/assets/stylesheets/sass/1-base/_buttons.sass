@@ -51,7 +51,7 @@ $text-blue: #2877A0
   background: white
   color: $yellow
   border: 1px solid $yellow
-  margin: 0 15px
+  margin: 15px 15px 0 15px
   &:hover
     background: tint($yellow, 10%)
     color: #fff
@@ -65,19 +65,33 @@ $text-blue: #2877A0
     background: tint($body-type-grey, 10%)
     color: #fff
   +button
+//
+// .btn-donate
+//   border-radius: 25px
 
-.btn-donate
-  background: $yellow
-  border-radius: 25px
-  &:hover
-    background: tint($yellow, 10%)
-    border-radius: 25px
 
 #btn-donate
+  background: $yellow
   color: white
-  // height: 2em
-  padding: 1px auto
-  font-size: 1.25em
+  padding: 10px 20px !important
+  font-size: 1em
+  border: 1px solid $yellow
+  border-radius: 25px
+  height: 40px
+  &:hover
+    background-color: white
+    color: $yellow
+    border: 1px solid $yellow
+
+#btn-sponsor
+  color: $yellow
+  background-color: white
+  padding: 10px 20px
+  font-size: 1em
+  font-weight: 500
+  &:hover
+    border-bottom: 1px solid $yellow
+    border-radius: 0
 
 li
   .btn-donate
